@@ -10,4 +10,5 @@ There are two adaptors :
 
 ## Download links
 You can download the 2.0.0 firmware package for the Gen3 [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/gen3/2.0.0/Gen3-2.0.0.swu).
+
 You can download the 2.0.0 release notes for the Gen3 [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/gen3/2.0.0/RN-001_KINOVA_Gen3_Ultra_lightweight_robot-Release_Notes_EN_R04.pdf).
