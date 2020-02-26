@@ -43,9 +43,8 @@ This function initializes the KORTEX™ API that operates underneath the MEX int
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
-| uint32_t | An handle to the API. this handle will be needed by most of the function of this MEX interface.|
+| uint32_t | An error code (`0` for success or non-zero for failure). |
+| uint32_t | An handle to the API. This handle will be needed by most of the function of this MEX interface.|
 | uint32_t | The device ID of the vision module attached to the robot. |
 
 ####  DestroyRobotApisWrapper
@@ -61,8 +60,7 @@ This function closes the connection with the KORTEX™ API cleanly.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 
 ####  SetAdmittance
@@ -79,8 +77,7 @@ Set the robot into admittance mode.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  SetServoingMode
 Set the robot servoing mode.
@@ -96,8 +93,7 @@ Set the robot servoing mode.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success(true) or not(false). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ---
 
@@ -116,8 +112,7 @@ Apply the emergency stop on the robot. The robot should stop moving and go to th
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  ClearFaults
 Try to clear the faults on the robot. If the robot is in a fault state, you should see a red LED on the robot's base.
@@ -132,8 +127,7 @@ Try to clear the faults on the robot. If the robot is in a fault state, you shou
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 
 ####  Reboot
@@ -149,8 +143,7 @@ Reboot the robot. Warning: the robot may fall slowly for a short time because du
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 
 ####  StopAction
@@ -166,8 +159,7 @@ Stop the current trajectory.
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  PauseAction
 Pause the current trajectory.
@@ -182,8 +174,7 @@ Pause the current trajectory.
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  ResumeAction
 Resume the current trajectory.
@@ -198,8 +189,7 @@ Resume the current trajectory.
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ---
 
@@ -219,8 +209,7 @@ Returns the joint count of the robot.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | uint32_t | The joint count. |
 
 
@@ -237,8 +226,7 @@ Returns the status of the robot.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | int32_t | Status of the robot. This value is described [here](data_structure.md#movementstatus). |
 
 
@@ -255,8 +243,7 @@ It returns the feedback data from the base, the joints and tool.
 
 |      C++ Type     |           Description           |
 |:-------------:|:-------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | [BaseFeedback](data_structure.md#basefeedback) | Feedback data for the base.     |
 | [ActuatorsFeedback](data_structure.md#actuatorsfeedback) | Feedback data for each joint. |
 | [InterconnectFeedback](data_structure.md#interconnectfeedback) | Feedback data for the interface module, including gripper.    |
@@ -275,7 +262,7 @@ Move the robot to a specific Cartesian pose. The orientation is represented with
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
 | uint32_t | API Handle. |
 | int32_t | The [CartesianConstraintType](data_structure.md#cartesianconstrainttype) applied on the movement. |
-| double\[2\] | Speed limitation that will be applied on the trajectory if the constraint has been set to CARTESIAN_CONSTRAINT_SPEED. The first value is the translation velocity and the second value is not used for now. |
+| double\[2\] | Speed limitation that will be applied on the trajectory if the constraint has been set to CARTESIAN_CONSTRAINT_SPEED. The first value is the translation velocity and the second value is the orientation velocity. |
 | double | Not supported for now. |
 | double\[3\] | Translation (X, Y, Z) in meters. |
 | double\[3\] | Orientation. (X(gamma), Y(beta), Z(alpha)) in degrees. (**Tait-Bryan, extrinsic ZYX**) |
@@ -284,8 +271,7 @@ Move the robot to a specific Cartesian pose. The orientation is represented with
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  ReachJointAngles
 Move the robot to a specific joint pose.
@@ -305,8 +291,7 @@ Move the robot to a specific joint pose.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  SendJointSpeedCommand
 Move the robot using a speed command.
@@ -324,8 +309,7 @@ Move the robot using a speed command.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  SendToolCommand
 Move the robot tool. For now, our gripper is considered as one tool so only one command (first index) is needed to move the tool.
@@ -344,8 +328,7 @@ Move the robot tool. For now, our gripper is considered as one tool so only one 
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 
 ####  PlayPreComputedTrajectory
@@ -366,8 +349,7 @@ Send a Precomputed Joint Trajectory to the robot. A Precomputed Joint Trajectory
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 --- 
 
@@ -392,8 +374,7 @@ Configure one of the sensors (either 2D or 3D) of the vision module.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  SetOptionValue
 Configure a specific option out of the options available on the vision module. 
@@ -411,8 +392,7 @@ Configure a specific option out of the options available on the vision module.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  InitVision
 Initialize the vision module API. 
@@ -427,8 +407,7 @@ Initialize the vision module API.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 
 ####  GetSensorSettings
 Get the configuration of a specific sensor(2D or 3D) of the vision module.
@@ -444,8 +423,7 @@ Get the configuration of a specific sensor(2D or 3D) of the vision module.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | uint32_t | The resolution of the sensor. See [Resolution](data_structure.md#resolution). |
 | uint32_t | The frame rate of the sensor. See [FrameRate](data_structure.md#framerate). |
 | uint32_t | The bit rate of the sensor. See [BitRate](data_structure.md#bitrate). |
@@ -465,8 +443,7 @@ Get the value of a specific option from a specific sensor (eitrher 2D or 3D) of 
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | uint32_t | The resolution of the sensor. This value is described [here](data_structure.md#resolution). |
 | uint32_t | The frame rate of the sensor. This value is described [here](data_structure.md#framerate). |
 | uint32_t | The bit rate of the sensor. This value is described [here](data_structure.md#bitrate). |
@@ -525,8 +502,7 @@ Returns the last error that occurred in the API.
 
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | uint32_t | The error code of the last error triggered by the Kortex API. |
 
 ####  GetErrorName
@@ -543,8 +519,7 @@ Returns a string that describe the error code provided as an input.
 
 |      C++ Type     |                                                    Description                                                   |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------:|
-| bool | A flag that tells if the operation was a success (`true`) or not (`false`). |
-| [ErrorStructMatrix](data_structure.md#errorstructmatrix) | A data structure that contains the error code if the operation was not a success.  |
+| uint32_t | An error code (`0` for success or non-zero for failure). |
 | char * | The name that describe the error code. |
 
 
