@@ -19,14 +19,17 @@ This software has been tested on **Ubuntu 16.04 (64-bit)** and **Windows 10**
 
 ## Download instructions
 
-You can download the latest firmware package for the Gen3 from [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/gen3/2.0.0/Gen3-2.0.0.swu).
-
-You can download the latest Gen3 release notes from [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/gen3/2.0.0/RN-001_KINOVA_Gen3_Ultra_lightweight_robot-Release_Notes_EN_R04.pdf).
-
 ## Installation Instructions
-You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/matlab/simplified_API/2.0.0/matlab_simplified_api_2.0.0.zip) on the Kinova Artifactory.
+You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/artifactory/webapp/#/artifacts/browse/tree/General/generic-local-public/kortex/matlab/simplified_api/) on the Kinova Artifactory.
 
-Uncompress the MATLAB adaptor folders from the downloaded archive.
+### Windows Operating System
+From the Kinova Artifactory:
+* Expand `kortex/matlab/simplified_api` to see the release folders
+* Right-click on the desired release folder
+* Select `Download` in the context menu
+* Choose the desired Archive Type
+* Click on `Download`
+* Extract the MATLAB adaptor folders from the downloaded archive.
 
 ## Build instructions
 
@@ -48,11 +51,8 @@ sudo apt install build-essential pkg-config
 ```
 
 ### How to build
-- Open MATLAB and navigate to the `mex-wrapper` folder.
-- Add the current folder and all of its subfolders to the MATLAB path.
-- Run the script `compileKortexMex.m` and wait until its completion.
 
-You are now ready to use the KORTEX™ MEX (MATLAB executable) interface.
+Refer to the dedicated page for [Setup](documentation/setup.md)
 
 ## Usage
 
@@ -62,11 +62,13 @@ There are two ways to interact with the robot via MATLAB.
 2. Using the MATLAB System object `kortex` (which itself uses the KORTEX™ API MEX interface)
 
 The KORTEX™ API MEX interface is the best option for controlling the arm via a MATLAB script.
-The `kortex` System object on the other hand is intended for dynamical simulations of the robot as part of a system in [Simulink](https://www.mathworks.com/help/simulink/define-new-system-objects.html). 
+The `kortex` System object on the other hand is intended for dynamical simulations of the robot as part of a system in [Simulink](https://www.mathworks.com/help/simulink/define-new-system-objects.html).
 
 For more information on both options:
 
 * [MEX interface](documentation/mex_interface.md)
 * [System object](documentation/system_object.md)
 
+In addtion, MATLAB Code Generation support for generating a ROS2 node and deploying the `kortex` System Object node directly on a NVidia Jetson Xavier platform is available. For more information, refer to the [ROS2 Code Generation on Jetson Target](documentation/setup.md#ROS2-Code-Generation-on-Jetson-Target) section in the Setup page.
 
+For more information on MATLAB code generation, see this [Mathworks documentation page](https://www.mathworks.com/help/mpc/code-generation.html).

@@ -142,3 +142,222 @@ The configuration data of the vision system. This consists of several fields whi
 
 #### is_moving
 A Boolean flag that tells if the robot is moving (`true`) or not (`false`).
+
+### Functions
+
+#### SendCmd_Reboot
+This function performs a software reboot on the gen3 robot.
+**WARNING** Make sure the robot is in a secure position because all the joints will stop servoing and the robot will fall. 
+
+##### Function Inputs
+No input
+
+##### Function Outputs
+|   Name   |  Type  | Description                                                         |
+|:--------:|:------:|---------------------------------------------------------------------|
+| isOk     | bool   | A flag that indicates if the function has been executed correctly.  |
+
+#### GetExtrinsic
+This function returns the extrinsic parameters of the camera.
+
+##### Function Inputs
+No input
+
+##### Function Outputs
+|   Name    |  Type              | Description                                                         |
+|:---------:|:------------------:|---------------------------------------------------------------------|
+| isOk      | bool               | A flag that indicates if the function has been executed correctly.  |
+| extrinsic | Bus_ExtrinsicParam | A struct that contains all the cameras's extrinsic parameters.      |
+
+#### GetIntrinsic
+This function returns the intrinsic parameters of the camera.
+
+##### Function Inputs
+|   Name    |  Type              | Description                                                              |
+|:---------:|:------------------:|--------------------------------------------------------------------------|
+|  sensor   | uint32             | ID of the target sensor that the intrinsic parameters will be read from. |
+
+##### Function Outputs
+|   Name    |  Type              | Description                                                         |
+|:---------:|:------------------:|---------------------------------------------------------------------|
+| isOk      | bool               | A flag that indicates if the function has been executed correctly.  |
+| intrinsic | Bus_IntrinsicParam | A struct that contains all the cameras's extrinsic parameters.      |
+
+#### GetMovementStatus
+This function returns the current movement status of the gen3 robot.
+
+##### Function Inputs
+No input
+
+##### Function Outputs
+|   Name   |  Type  | Description                                                                                               |
+|:--------:|:-------|-----------------------------------------------------------------------------------------------------------|
+| isOk     | bool   | A flag that indicates if the function has been executed correctly.                                        |
+| status   | uint32 | Current movement status. Based on C enum MovementStatus from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+#### GetOptionValue
+This function returns the value of an option on a specific sensor.
+
+##### Function Inputs
+|   Name    |  Type   | Description                                                                                               |
+|:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  option   | uint32  | Target option. Based on C enum **Option** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+##### Function Outputs
+|   Name    |  Type              | Description                                                                                               |
+|:---------:|:------------------:|-----------------------------------------------------------------------------------------------------------|
+| isOk      | bool               | A flag that indicates if the function has been executed correctly.                                        |
+| value     | uint32             | Value of the targeted option.                                                                             |
+
+#### GetSensorSettings
+This function returns the configured settings of a specific sensor.
+
+##### Function Inputs
+|   Name    |  Type   | Description                                                                                               |
+|:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+#### GetSensorSettings
+This function returns the configured settings of a specific sensor.
+
+##### Function Inputs
+|   Name    |  Type   | Description                                                                                               |
+|:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+                                                    |
+| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+#### DoSensorFocusAction
+Execute a focus action on the camera. You can find a C++ example [here](https://github.com/Kinovarobotics/kortex/blob/master/api_cpp/examples/500-Vision/03_vision_sensor_focus_action.cpp) that explains how to use this function.
+
+##### Function Inputs
+|   Name        |  Type   | Description                                                                                               |
+|:-------------:|:-------:|-----------------------------------------------------------------------------------------------------------|
+|  sensor       | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  focus_action | uint32  | Target sensor. Based on C enum **FocusAction** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+                                                    |
+
+#### SendCartesianPose
+Send a Cartesian pose to the robot. The orientation is represented with Euler angles and the convention used is the **Tait-Bryan, extrinsic ZYX**.
+
+##### Function Inputs
+|   Name           |  Type                        | Description                                                                                               |
+|:----------------:|:----------------------------:|-----------------------------------------------------------------------------------------------------------|
+|  cartesian_cmd   | double[6]                    | Cartesian command. [X, Y, Z, THETA_X, THETA_Y, THETA_Z] Translation in meters and orientation in degrees.|
+|  constraint_type | enum CartesianConstraintType | Type of constraint. Based on [CartesianConstraintType](data_structure.md). |
+|  speeds          | double[2]                    | Translation and orientation speed. [TRANSLATION_SPEED, ORIENTATION_SPEED]. Translation in m / s and orientation in °/s|
+|  duration        | uint32                       | Not supported for now. |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+
+#### SendJointAngles
+Send a joint pose to the robot. All angles are in degrees.
+
+##### Function Inputs
+|   Name          |  Type                    | Description                                                                                               |
+|:---------------:|:------------------------:|-----------------------------------------------------------------------------------------------------------|
+|  joint_cmd      | double[ACTUATOR_COUNT]   | Joint command, in degrees, where ACTUATOR_COUNT is the actual actuator count. The first index is the nearest joint to the base and the last index is the nearest joint to the gripper. |
+|  constraintType | enum JointConstraintType | Type of constraint. Based on [CartesianConstraintType](data_structure.md). |
+|  speed          | double                   | Speed limitation, in degrees / second, that will be applied on the trajectory if the constraint has been set to JOINT_CONSTRAINT_SPEED.|
+|  duration       | uint32                   | Time limitation, in second, that will be applied on the trajectory if the constraint has been set to JOINT_CONSTRAINT_DURATION. |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+
+#### SendPreComputedTrajectory
+Send a Precomputed Joint Trajectory to the robot. A Precomputed Joint Trajectory is a set of (timestamp, angular position, angular velocity, angular acceleration) for each joint at each increment of the trajectory. Together, this represents a trajectory. For more information on the Precomputed Joint Trajectories, you can read [the documentation on Precomputed Joint Trajectories](./precomputed_joint_trajectories.md).
+
+##### Function Inputs
+|   Name         |  Type                    | Description                                                                                               |
+|:--------------:|:------------------------:|-----------------------------------------------------------------------------------------------------------|
+|  position      | double[ACTUATOR_COUNT][] | A matrix that contains a list of angular positions (degrees) for each joint at each increment.            |
+|  velocity      | double[ACTUATOR_COUNT][] | A matrix that contains a list of angular velocities (degrees / second) for each joint at each increment.  |
+|  acceleration  | double[ACTUATOR_COUNT][] | A matrix that contains a list of angular accelerations (degrees / second ^ squared) for each joint at each increment. |
+|  timestamp_sec | double[ACTUATOR_COUNT][] | A matrix that contains a list of timestamps for each joint at each increment.                             |
+
+##### Function Outputs
+|   Name     |  Type  | Description                                                                                               |
+|:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
+| isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
+
+#### SendRefreshFeedback
+It returns the feedback data from the base, the joints and tool.
+
+##### Function Inputs
+No input
+
+##### Function Outputs
+|   Name               |  Type              | Description                                                                                               |
+|:--------------------:|:------------------:|-----------------------------------------------------------------------------------------------------------|
+| isOk                 | bool               | A flag that indicates if the function has been executed correctly.                                        |
+| baseFeedback         | Bus_BaseFeedback   | Feedback data from the Base. See [BaseFeedBack](data_structure.md#basefeedback).                          |
+| jointsFeedback       | Bus_JointsFeedback | Feedback data from each joint. See [ActuatorsFeedback](data_structure.md#actuatorsfeedback).              |
+| interconnectFeedback | Bus_ToolFeedback   | Feedback data from the Base. See [InterconnectFeedBack](data_structure.md#interconnectfeedback).          |
+
+#### SendToolCommand
+A command to control the gripper movement
+
+##### Function Inputs
+|   Name         |  Type                    | Description                                                                                               |
+|:--------------:|:------------------------:|-----------------------------------------------------------------------------------------------------------|
+|  tool_cmd_mode | uint32 | Command mode. Based on [ToolMode](data_structure.md). |
+|  duration      | double | Duration constraint. If not 0, allows to set a limit (in seconds) to the tool_cmd. |
+|  tool_cmd      | double[TOOL_COUNT] | Gripper movement values for each tool. (Most of the time you only have 1 tool.) In position, admissible values for each finger is between 0 and 1.0, where 0 is fully open and 1.0 is fully closed. In speed, admissible values for each finger is between -1.0 and 1.0, where 1.0 corresponds to maximum opening speed and -1.0 corresponds to maximum closing speed.|
+
+##### Function Outputs
+|   Name               |  Type              | Description                                                                                               |
+|:--------------------:|:------------------:|-----------------------------------------------------------------------------------------------------------|
+| isOk                 | bool               | A flag that indicates if the function has been executed correctly.                                        |
+
+
+#### SetAdmittance
+Activate the admittance mode.
+
+##### Function Inputs
+|   Name          |  Type  | Description                                                                                               |
+|:---------------:|:------:|-----------------------------------------------------------------------------------------------------------|
+|  admittanceMode | uint32 | Admittance mode. Based on [AdmittanceMode](data_structure.md). |
+
+##### Function Outputs
+|   Name               |  Type              | Description                                                                                               |
+|:--------------------:|:------------------:|-----------------------------------------------------------------------------------------------------------|
+| isOk                 | bool               | A flag that indicates if the function has been executed correctly.                                        |
+
+#### SetServoingMode
+Set the robot's servoing mode.
+
+##### Function Inputs
+|   Name          |  Type  | Description                                                                                               |
+|:---------------:|:------:|-----------------------------------------------------------------------------------------------------------|
+|  servoingMode | uint32 | Servoing mode. Based on [ServoingMode](data_structure.md). |
+
+##### Function Outputs
+|   Name               |  Type              | Description                                                                                               |
+|:--------------------:|:------------------:|-----------------------------------------------------------------------------------------------------------|
+| isOk                 | bool               | A flag that indicates if the function has been executed correctly.                                        |

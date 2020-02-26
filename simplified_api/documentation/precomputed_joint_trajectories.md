@@ -7,7 +7,7 @@ The Precomputed Joint Trajectories is the way to send the arm through joint-spac
 
 ### kObjTrajectoryFeeder object
 
-The kObjTrajectoryFeeder object in the example Simulink model (`mex-wrapper/example_model.slx`) reads a Precomputed Joint Trajectory (computed offline with a motion planner) from a CSV file(`mex-wrapper/testpoints.csv`) and sends it to the kortex System Object. You will most likely create your own object to send your trajectories to the kortex System object.
+The kObjTrajectoryFeeder object in the [example Simulink model](../mex-wrapper/example_model.slx) reads a Precomputed Joint Trajectory (computed offline with a motion planner) from a [CSV file](../mex-wrapper/testpoints.csv) and sends it to the kortex System Object. You will most likely create your own object to send your trajectories to the kortex System object.
 
 ### Structure of the input arrays
 

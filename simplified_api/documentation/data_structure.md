@@ -114,6 +114,22 @@ This is a data structure returned by most of the functions of the MEX interface.
 | uint32_t |   code   | A general [error code](#error-code-list) associated with this error. Most users will not need to work with this value because it does not tell much and is used internally in the Kortex API. |
 | uint32_t | sub_code | An [error sub code](#sub-error-code-list) that gives more information about the error. Most users will prefer to use this value instead of the general code.                        
 
+<a name="MotorFeedback"></a>
+## MotorFeedback
+
+| Type | Name | Description |
+|:-----:|:----:|:-----------:|
+| uint32_t | motor_id | MessageId |
+| uint32_t | status_flags | Status flags |
+| uint32_t | jitter_comm | Jitter from the communication (in microsecond) |
+| double | position | Position of the gripper motor (in Percentage 0-100%) |
+| double | velocity | Velocity of the gripper motor (in Percentage 0-100%) |
+| double | force | Force of the gripper motor |
+| double | current_motor | Electric current of the gripper motor (in mA) |
+| double | voltage | Voltage of the gripper motor (in V) |
+| double | temperature_core | temparature of the core (in Celsius) |
+| double | temperature_motor | temparature of the gripper motor (in Celsius) |
+
 <a name="GripperFeedback"></a>
 ## GripperFeedback
 
@@ -126,13 +142,7 @@ This is a data structure returned by most of the functions of the MEX interface.
 | uint32_t | warning_bank_a | Warning bank A (see `GripperConfig.SafetyIdentifier`) |
 | uint32_t | warning_bank_b | Warning bank B (see `GripperConfig.SafetyIdentifier`) |
 | uint32_t | motor_count | Motor count on the gripper. |
-| uint32_t\[GRIPPER_MAX_MOTOR_COUNT\] | motor_id | Motor ID |
-| double\[GRIPPER_MAX_MOTOR_COUNT\] | motor_position | Position of the gripper fingers in percentage (0-100%) |
-| double\[GRIPPER_MAX_MOTOR_COUNT\] | motor_velocity | Velocity of the gripper fingers in percentage (0-100%) |
-| double\[GRIPPER_MAX_MOTOR_COUNT\] | motor_current_motor | Current comsumed by the gripper motor (mA) |
-| double\[GRIPPER_MAX_MOTOR_COUNT\] | motor_voltage | Motor Voltage (V) |
-| double\[GRIPPER_MAX_MOTOR_COUNT\] | motor_temperature_motor | Motor temperature. (degrees Celsius) |
-
+| [MotorFeedback](#motorfeedback)\[GRIPPER_MAX_MOTOR_COUNT\] | motor | Feedback of all gripper motors |
 
 <a name="InterconnectFeedback"></a>
 ## InterconnectFeedback
@@ -158,6 +168,16 @@ This is a data structure returned by most of the functions of the MEX interface.
 | double | difference_count_b |  |
 | [GripperFeedback](#gripperfeedback) | gripper_feedback | Feedback data from gripper (if attached) |
 
+<a name="DistortionCoefficients"></a>
+## DistortionCoefficients
+
+| Type | Name | Description |
+|:-----:|:----:|:-----------:|
+| double | k1 | First radial distortion coefficient |
+| double | k2 | Second radial distortion coefficient |
+| double | k3 | Third radial distortion coefficient |
+| double | p1 | First tangential distortion coefficient |
+| double | p2 | Second tangential distortion coefficient |
 
 <a name="IntrinsicParameters"></a>
 ## IntrinsicParameters
@@ -170,11 +190,7 @@ This is a data structure returned by most of the functions of the MEX interface.
 | double | principal_point_y | Vertical coordinate of the principal point of the image, as a pixel offset from the top edge |
 | double | focal_length_x | Focal length of the image plane, as a multiple of pixel width |
 | double | focal_length_y | Focal length of the image plane, as a multiple of pixel height |
-| double | k1 | First radial distortion coefficient |
-| double | k2 | Second radial distortion coefficient |
-| double | k3 | Third radial distortion coefficient |
-| double | p1 | First tangential distortion coefficient |
-| double | p2 | Second tangential distortion coefficient |
+| [DistortionCoefficients](#distortioncoefficients) | distortion_coeffs | Distortion Coefficients |
 
 
 <a name="RotationMatrix"></a>
