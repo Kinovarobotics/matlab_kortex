@@ -193,7 +193,7 @@ No input
 |   Name   |  Type  | Description                                                                                               |
 |:--------:|:-------|-----------------------------------------------------------------------------------------------------------|
 | isOk     | bool   | A flag that indicates if the function has been executed correctly.                                        |
-| status   | uint32 | Current movement status. Based on C enum MovementStatus from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| status   | uint32 | Current movement status. Based on C enum MovementStatus from kortex_wrapper_data.h. |
 
 #### GetOptionValue
 This function returns the value of an option on a specific sensor.
@@ -201,8 +201,8 @@ This function returns the value of an option on a specific sensor.
 ##### Function Inputs
 |   Name    |  Type   | Description                                                                                               |
 |:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
-|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-|  option   | uint32  | Target option. Based on C enum **Option** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
+|  option   | uint32  | Target option. Based on C enum **Option** from kortex_wrapper_data.h. |
 
 ##### Function Outputs
 |   Name    |  Type              | Description                                                                                               |
@@ -216,15 +216,15 @@ This function returns the configured settings of a specific sensor.
 ##### Function Inputs
 |   Name    |  Type   | Description                                                                                               |
 |:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
-|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
 
 ##### Function Outputs
 |   Name     |  Type  | Description                                                                                               |
 |:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
 | isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
-| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from kortex_wrapper_data.h. |
+| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
+| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
 
 #### GetSensorSettings
 This function returns the configured settings of a specific sensor.
@@ -232,16 +232,16 @@ This function returns the configured settings of a specific sensor.
 ##### Function Inputs
 |   Name    |  Type   | Description                                                                                               |
 |:---------:|:-------:|-----------------------------------------------------------------------------------------------------------|
-|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  sensor   | uint32  | Target sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
 
 ##### Function Outputs
 |   Name     |  Type  | Description                                                                                               |
 |:----------:|:------:|-----------------------------------------------------------------------------------------------------------|
 | isOk       | bool   | A flag that indicates if the function has been executed correctly.                                        |
                                                     |
-| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+| resolution | uint32 | Resolution of the targeted sensor. Based on the C enum **Sensor** from kortex_wrapper_data.h. |
+| frame_rate | uint32 | Frame rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
+| bit_rate   | uint32 | Bit rate of the targeted sensor. Resolution of the targeted sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
 
 #### DoSensorFocusAction
 Execute a focus action on the camera. You can find a C++ example [here](https://github.com/Kinovarobotics/kortex/blob/master/api_cpp/examples/500-Vision/03_vision_sensor_focus_action.cpp) that explains how to use this function.
@@ -249,8 +249,8 @@ Execute a focus action on the camera. You can find a C++ example [here](https://
 ##### Function Inputs
 |   Name        |  Type   | Description                                                                                               |
 |:-------------:|:-------:|-----------------------------------------------------------------------------------------------------------|
-|  sensor       | uint32  | Target sensor. Based on C enum **Sensor** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
-|  focus_action | uint32  | Target sensor. Based on C enum **FocusAction** from [kortex_wrapper_data.h](../mex-wrapper/include/kortex_wrapper_data.h). |
+|  sensor       | uint32  | Target sensor. Based on C enum **Sensor** from kortex_wrapper_data.h. |
+|  focus_action | uint32  | Target sensor. Based on C enum **FocusAction** from kortex_wrapper_data.h. |
 
 ##### Function Outputs
 |   Name     |  Type  | Description                                                                                               |
