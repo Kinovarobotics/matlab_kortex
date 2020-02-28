@@ -32,7 +32,7 @@ sudo apt install libglib2.0-0
 ```
 
 ## Installation Instructions
-You can access the latest release of the Vision Module MATLAB Image Acquisition Toolbox Adaptor [here](https://artifactory.kinovaapps.com/artifactory/generic-local-public/kortex/matlab/vision/1.0.0/matlab_vision_imaq_1.0.0.zip) on the Kinova Artifactory.
+You can access the latest release of the Vision Module MATLAB Image Acquisition Toolbox Adaptor [here](https://artifactory.kinovaapps.com/artifactory/generic-public/kortex/matlab/vision/1.0.0/matlab_vision_imaq_1.0.0.zip) on the Kinova Artifactory.
 
 Uncompress the archive to access either the Windows or Linux binaries:
 
