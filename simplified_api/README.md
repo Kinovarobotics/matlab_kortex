@@ -20,7 +20,7 @@ This software has been tested on **Ubuntu 16.04 (64-bit)** and **Windows 10**
 ## Download instructions
 
 ## Installation Instructions
-You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/artifactory/webapp/#/artifacts/browse/tree/General/generic-local-public/kortex/matlab/simplified_api/) on the Kinova Artifactory.
+You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/artifactory/webapp/#/artifacts/browse/tree/General/generic-public/kortex/matlab/simplified_API/) on the Kinova Artifactory.
 
 ### Windows Operating System
 From the Kinova Artifactory:
