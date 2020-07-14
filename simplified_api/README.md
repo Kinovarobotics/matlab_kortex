@@ -20,7 +20,7 @@ This software has been tested on **Ubuntu 16.04 (64-bit)** and **Windows 10**
 ## Download instructions
 
 ## Installation Instructions
-You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/artifactory/webapp/#/artifacts/browse/tree/General/generic-public/kortex/matlab/simplified_API/) on the Kinova Artifactory.
+You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/ui/repos/tree/General/generic-public%2Fkortex%2Fmatlab%2Fsimplified_API  ) on the Kinova Artifactory.
 
 ### Windows Operating System
 From the Kinova Artifactory:
@@ -69,6 +69,6 @@ For more information on both options:
 * [MEX interface](documentation/mex_interface.md)
 * [System object](documentation/system_object.md)
 
-In addtion, MATLAB Code Generation support for generating a ROS2 node and deploying the `kortex` System Object node directly on a NVidia Jetson Xavier platform is available. For more information, refer to the [ROS2 Code Generation on Jetson Target](documentation/setup.md#ROS2-Code-Generation-on-Jetson-Target) section in the Setup page.
+In addition, MATLAB Code Generation support for generating a ROS2 node and deploying the `kortex` System Object node directly on a NVidia Jetson Xavier platform is available. For more information, refer to the [ROS2 Code Generation on Jetson Target](documentation/setup.md#ROS2-Code-Generation-on-Jetson-Target) section in the Setup page.
 
 For more information on MATLAB code generation, see this [Mathworks documentation page](https://www.mathworks.com/help/mpc/code-generation.html).
