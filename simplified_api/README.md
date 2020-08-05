@@ -70,6 +70,6 @@ For more information on both options:
 * [MEX interface](documentation/mex_interface.md)
 * [System object](documentation/system_object.md)
 
-In addtion, MATLAB Code Generation support for generating a ROS2 node and deploying the `kortex` System Object node directly on a NVidia Jetson Xavier platform is available. For more information, refer to the [ROS2 Code Generation on Jetson Target](documentation/setup.md#ROS2-Code-Generation-on-Jetson-Target) section in the Setup page.
+In addition, MATLAB Code Generation support for generating a ROS2 node and deploying the `kortex` System Object node directly on a NVidia Jetson Xavier platform is available. For more information, refer to the [ROS2 Code Generation on Jetson Target](documentation/setup.md#ROS2-Code-Generation-on-Jetson-Target) section in the Setup page.
 
 For more information on MATLAB code generation, see this [Mathworks documentation page](https://www.mathworks.com/help/mpc/code-generation.html).
