@@ -300,6 +300,7 @@ Send a Precomputed Joint Trajectory to the robot. A Precomputed Joint Trajectory
 |  velocity      | double[ACTUATOR_COUNT][] | A matrix that contains a list of angular velocities (degrees / second) for each joint at each increment.  |
 |  acceleration  | double[ACTUATOR_COUNT][] | A matrix that contains a list of angular accelerations (degrees / second ^ squared) for each joint at each increment. |
 |  timestamp_sec | double[ACTUATOR_COUNT][] | A matrix that contains a list of timestamps for each joint at each increment.                             |
+|  step_count | uint32 | Number of steps (increments) for the trajectory |
 
 ##### Function Outputs
 |   Name     |  Type  | Description                                                                                               |
