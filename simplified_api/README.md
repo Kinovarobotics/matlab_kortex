@@ -7,7 +7,7 @@ This MATLAB adaptor allows communication via MATLAB with a KINOVA<sup>®</sup> <
 This software has been tested on **Ubuntu 16.04 (64-bit)** and **Windows 10** 
 
 ### MATLAB
-1. [MATLAB](https://www.mathworks.com/products/matlab.html) version 9.5 (R2018b)
+1. [MATLAB](https://www.mathworks.com/products/matlab.html) version 9.8 (R2020a)
 2. Simulink Coder Toolbox
 3. Simulink Toolbox
 4. Simscape Multibody Toolbox
@@ -20,7 +20,8 @@ This software has been tested on **Ubuntu 16.04 (64-bit)** and **Windows 10**
 ## Download instructions
 
 ## Installation Instructions
-You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/ui/repos/tree/General/generic-public%2Fkortex%2Fmatlab%2Fsimplified_API  ) on the Kinova Artifactory.
+You can access the latest release of the MATLAB adaptor [here](https://artifactory.kinovaapps.com/ui/repos/tree/General/generic-public%2Fkortex%2Fmatlab%2Fsimplified_API%2F2.2.1%2Fmatlab_simplified_api_2.2.1.zip) on the Kinova Artifactory.
+( The release contains compiled libraries for Linux x86 architecture and Windows Visual Studio 2015 )
 
 ### Windows Operating System
 From the Kinova Artifactory:
