@@ -1,4 +1,4 @@
-# Kortex System Object Setup Guide
+# KINOVA KORTEX™ System Object Setup Guide
 
 ## Overview
 

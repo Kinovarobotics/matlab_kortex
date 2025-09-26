@@ -52,4 +52,4 @@ Once sent to the arm, a trajectory is validated and the arm will execute it if i
 
 ### Trajectory errors
 
-If the arm encounters errors during the trajectory validation, it will report the errors in a Trajectory Report. The Trajectory Error Report will soon be available in Matlab, and is already available from the Kortex API when calling the GetTrajectoryErrorReport function from the Base service. 
+If the arm encounters errors during the trajectory validation, it will report the errors in a Trajectory Report. The Trajectory Error Report will soon be available in Matlab, and is already available from the KINOVA KORTEX™ API when calling the GetTrajectoryErrorReport function from the Base service. 

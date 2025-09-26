@@ -4,7 +4,7 @@
 
 ---
 
-The file `kortex.m` defines a MATLAB [System object](https://www.mathworks.com/help/matlab/matlab_prog/define-basic-system-objects-1.html) class `kortex` that lets you use some of the functions available in the KORTEX™ API [MEX interface](mex_interface.md). 
+The file `kortex.m` defines a MATLAB [System object](https://www.mathworks.com/help/matlab/matlab_prog/define-basic-system-objects-1.html) class `kortex` that lets you use some of the functions available in the KINOVA KORTEX™ API [MEX interface](mex_interface.md). 
 
 The `kortex` System object represents the KINOVA<sup>®</sup> Gen3 <i>Ultra lightweight robot</i> as a dynamical system component 'black box' with inputs and outputs.
 

@@ -1,4 +1,4 @@
-# matlab_kortex
+# matlab_KINOVA KORTEX™
 
 ## Overview
 
@@ -14,4 +14,4 @@ This repository is licenced under the [BSD 3-Clause "Revised" License](./LICENSE
 
 ## Download links
 
-You can refer to the [Kortex repository "Download links" section](https://github.com/Kinovarobotics/kortex#download-links) to download the firmware package and the release notes.
+You can refer to the [KINOVA KORTEX™ repository "Download links" section](https://github.com/Kinovarobotics/kortex#download-links) to download the firmware package and the release notes.

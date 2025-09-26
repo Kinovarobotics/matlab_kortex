@@ -4,7 +4,7 @@
 
 ---
 
-This section gives information on the functions accessible via the KORTEX™ API MEX interface. 
+This section gives information on the functions accessible via the KINOVA KORTEX™ API MEX interface. 
 
 The MEX interface allows you to interact with and control the robot from a MATLAB script. 
 
@@ -14,7 +14,7 @@ MEX interface function calls must be wrapped in a call to `kortexApiMexInterface
 
 Examples of use of the MEX interface can be seen in the example `/mex-wrapper/tests_api_control.m`.
 
-Examples can also be seen in the file `kortex.m`. In that file, a `kortex` MATLAB System object uses the KORTEX™ API MEX interface.
+Examples can also be seen in the file `kortex.m`. In that file, a `kortex` MATLAB System object uses the KINOVA KORTEX™ API MEX interface.
 
 Note that all scripts should begin with a call to `CreateRobotApisWrapper`, and end with a call to `DestroyRobotApisWrapper`.
 
@@ -27,7 +27,7 @@ Note that all scripts should begin with a call to `CreateRobotApisWrapper`, and 
 
 
 ####  CreateRobotApisWrapper
-This function initializes the KORTEX™ API that operates underneath the MEX interface.
+This function initializes the KINOVA KORTEX™ API that operates underneath the MEX interface.
 
 ##### Input
 
@@ -48,7 +48,7 @@ This function initializes the KORTEX™ API that operates underneath the MEX int
 | uint32_t | The device ID of the vision module attached to the robot. |
 
 ####  DestroyRobotApisWrapper
-This function closes the connection with the KORTEX™ API cleanly.
+This function closes the connection with the KINOVA KORTEX™ API cleanly.
 
 ##### Input
 
@@ -503,7 +503,7 @@ Returns the last error that occurred in the API.
 |      C++ Type      |                          Description                          |
 |:--------------:|:-------------------------------------------------------------:|
 | uint32_t | An error code (`0` for success or non-zero for failure). |
-| uint32_t | The error code of the last error triggered by the Kortex API. |
+| uint32_t | The error code of the last error triggered by the KINOVA KORTEX™ API. |
 
 ####  GetErrorName
 Returns a string that describe the error code provided as an input.
