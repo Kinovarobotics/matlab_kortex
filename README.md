@@ -1,4 +1,4 @@
-# matlab_KINOVA KORTEX™
+# matlab_kortex
 
 ## Overview
 
