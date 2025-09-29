@@ -111,7 +111,7 @@ This is a data structure returned by most of the functions of the MEX interface.
 
 |   Name   |   Type   | Description                                                                                                                                                                 |
 |:--------:|:--------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| uint32_t |   code   | A general [error code](#error-code-list) associated with this error. Most users will not need to work with this value because it does not tell much and is used internally in the Kortex API. |
+| uint32_t |   code   | A general [error code](#error-code-list) associated with this error. Most users will not need to work with this value because it does not tell much and is used internally in the KINOVA KORTEX™ API. |
 | uint32_t | sub_code | An [error sub code](#sub-error-code-list) that gives more information about the error. Most users will prefer to use this value instead of the general code.                        
 
 <a name="MotorFeedback"></a>

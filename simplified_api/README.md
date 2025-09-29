@@ -59,10 +59,10 @@ Refer to the dedicated page for [Setup](documentation/setup.md)
 
 There are two ways to interact with the robot via MATLAB.
 
-1. Using the KORTEX™ API MEX interface (`kortexApiMexInterface.cpp`)
-2. Using the MATLAB System object `kortex` (which itself uses the KORTEX™ API MEX interface)
+1. Using the KINOVA KORTEX™ API MEX interface (`kortexApiMexInterface.cpp`)
+2. Using the MATLAB System object `kortex` (which itself uses the KINOVA KORTEX™ API MEX interface)
 
-The KORTEX™ API MEX interface is the best option for controlling the arm via a MATLAB script.
+The KINOVA KORTEX™ API MEX interface is the best option for controlling the arm via a MATLAB script.
 The `kortex` System object on the other hand is intended for dynamical simulations of the robot as part of a system in [Simulink](https://www.mathworks.com/help/simulink/define-new-system-objects.html).
 
 For more information on both options:
